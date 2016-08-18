@@ -4,4 +4,6 @@
 http://www.xdloveglt.cn:8080/BJAdmin/   
 测试用户名zong        密码123123 
 
-
+现在的项目里缺少所有的jar包  
+请去下面的地址下载  
+http://download.csdn.net/detail/dlf123321/9606986
