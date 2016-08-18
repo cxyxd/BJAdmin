@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+      
+        <package name="user" namespace="/module/user" extends="basePack" >  
+			
+			<action name="getMyInfo" class="userAction" method="getMyInfo" >
+					<result name="success">myInfo.jsp</result>
+			</action>
+
+			
+
+       </package>  
+       
+        <package name="userJSON" namespace="/module/appclient" extends="json-default,basePack" >  		
+			<action name="totalUpdate" class="userAction" method="totalUpdate" >
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+       </package>  
+       
+        
+       
+        <package name="userJSON" namespace="/module/user" extends="json-default,basePack" >  		
+			<action name="update" class="userAction" method="update" >
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+       </package>  
+       
+       <package name="getAllAppClent" namespace="/module/appclient" extends="basePack" >  
+        	<action name="getAllAppClent" class="userAction" method="getAllAppClent">
+					<result name="success">clientShow.jsp</result>
+			</action>
+			
+			 <action name="getAllBranch" class="userAction" method="getAllBranch">
+					<result name="success">branchShow.jsp</result>
+			</action>
+			
+			<action name="getById" class="appClientAction" method="getById">
+					<result name="success">clientShowDetail.jsp</result>
+			</action>
+			<action name="getByIdBranch" class="appClientAction" method="getById">
+					<result name="success">branchShowDetail.jsp</result>
+			</action>
+			<action name="getCompanyInfo" class="userAction" method="getCompanyInfo">
+					<result name="success">companyDetail.jsp</result>
+			</action>
+			
+			
+			
+       </package>  
+       
+    
+	
+</struts>

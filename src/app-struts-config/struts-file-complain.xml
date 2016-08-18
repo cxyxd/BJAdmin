@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+         
+       <package name="complainAndroid" namespace="/module/complain" extends="json-default,basePack" >  
+        	<action name="insert" class="complainAction" method="insert">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+			
+			<action name="delete" class="complainAction" method="delete">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+			
+			
+			<action name="showComplainAndroid" class="complainAction" method="showComplainAndroid">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+						
+       </package>  
+       
+        <package name="complainPC" namespace="/module/complain" extends="basePack" >  
+        	<action name="getAllComplain" class="complainAction" method="showComplainPC">
+					<result name="success">showComplainResult.jsp</result>
+			</action>
+			
+			 <action name="getById" class="complainAction" method="getById">
+					<result name="success">updateLeaveMessage.jsp</result>
+			</action>
+			
+			<action name="getAllAppClent" class="userAction" method="getAllAppClent">
+					<result name="success">leaveMessageInfo.jsp</result>
+			</action>
+       </package>  
+       
+      
+	
+</struts>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!--  <package name="customer" namespace="/module/customer" extends="json-default" >  
+      
+        	<action name="customerFindAll" class="customerAction" method="findAll">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>	
+		
+       </package>   
+      -->  
+         
+       <package name="login" namespace="/module/login"  extends="json-default,basePack" >  
+      
+        	<action name="login" class="loginAction" method="login">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>	
+			
+			<action name="loginAndroid" class="loginAndroidAction" method="login">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>	
+		
+       </package>
+
+
+	<package name="randcode" namespace="/yzm" extends="basePack">
+
+	    <action name="randPic" class="randomAction">        
+          <result type="stream">        
+            <param name="contentType">image/jpeg</param>        
+            <param name="inputName">inputStream</param>        
+          </result>   
+        </action>    
+  
+        <action name="loginWithYZMAction" class="loginWithYZMAction">  
+            <result name="success">success.jsp</result>  
+            <result name="error">fail.jsp</result>  
+        </action>  
+
+
+
+	</package>  
+       
+
+       
+      
+      
+	
+</struts>

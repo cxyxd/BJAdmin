@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+         
+       <package name="step" namespace="/module/step" extends="basePack" >  
+        	<action name="step1" class="stepOne" >
+					 <result name="success">Step2.jsp</result>  
+			</action>
+			
+			 <action name="step2" class="stepTwo" >
+				     <result name="success">Step3.jsp</result>  
+			</action>
+			
+			<action name="step3" class="stepThree" >
+				     <result name="success">success.jsp</result>  
+			</action>
+       </package>
+       
+       <package name="showstep" namespace="/module/step" extends="basePack" >  
+        	<action name="showstep1" class="stepOne" method="show" >
+					
+			</action>
+			
+			 <action name="showstep2" class="stepTwo" method="show" >
+				  
+			</action>
+			
+			<action name="showstep3" class="stepThree" method="show" >
+				   
+			</action>
+       </package>
+       
+     
+          
+      
+	
+</struts>

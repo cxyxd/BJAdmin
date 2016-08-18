@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+
+	
+	<!-- 核心DAO -->
+	<context:component-scan base-package="com.core.dao"/>
+	
+	
+	<!-- 客户 -->
+	<context:component-scan base-package="com.module.customer"/>
+	
+	<!-- 登陆 -->
+	<context:component-scan base-package="com.module.login"/>
+	
+	<!-- 市场 -->
+	<context:component-scan base-package="com.module.market"/>
+	
+	<!-- 对手-->
+	<context:component-scan base-package="com.module.opponent"/>
+	
+	<!-- 移动端业务员-->
+	<context:component-scan base-package="com.module.appclient"/>
+	
+    <!-- 地图-->
+	<context:component-scan base-package="com.module.map"/>
+	
+	  <!-- 拜访-->
+	<context:component-scan base-package="com.module.visit"/>
+	
+	<!-- 企业信息-->
+	<context:component-scan base-package="com.module.user"/>
+	
+	<!-- 投诉-->
+	<context:component-scan base-package="com.module.complain"/>
+	
+	<!-- 版本-->
+	<context:component-scan base-package="com.module.version"/>
+	
+		
+	<!-- 控制中心-->
+	<context:component-scan base-package="com.module.center"/>
+	
+	<!-- 验证码-->
+	<context:component-scan base-package="com.yzm"/>
+	
+	<!-- 步骤-->
+	<context:component-scan base-package="com.module.step"/>
+	
+	
+	
+	
+	
+	
+	<import resource="applicationContext-common.xml" />
+	<import resource="applicationContext-core.xml" />
+
+</beans>

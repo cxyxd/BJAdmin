@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+       <package name="opponent" namespace="/module/opponent" extends="json-default,basePack" >  
+        	<action name="insertOpponent" class="opponentAction" method="insert">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>	
+			 <action name="getAllOppforMarketAndroid" class="opponentAction" method="getAllOpponentAndroid">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>	
+			
+			 <action name="delete" class="opponentAction" method="delete">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>	
+       </package>  
+       
+       <package name="getopponent" namespace="/module/opponent" extends="basePack" >  
+        	<action name="getAllOpponent" class="opponentAction" method="getAllOpponent">
+					<result name="success">showOpponentResult.jsp</result>
+			</action>
+			<action name="getAllOppforMarket" class="opponentAction" method="getAllOpponent">
+					<result name="success">../market/inputMarket.jsp</result>
+			</action>	
+			<action name="getById" class="opponentAction" method="getById">
+					<result name="success">../opponent/detail.jsp</result>
+			</action>	
+			<action name="getAllAppClent" class="userAction" method="getAllAppClent">
+					<result name="success">show.jsp</result>
+			</action>
+       </package>  
+       
+      
+	
+</struts>

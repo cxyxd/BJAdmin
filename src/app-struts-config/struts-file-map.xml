@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+         
+       <package name="getMyVisit" namespace="/module/map" extends="json-default,basePack" >  
+        	<action name="getMyVisit" class="mapAction" method="getMyVisit">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+			<action name="delete" class="mapAction" method="delete">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+       </package>  
+       
+        <package name="getAllVisit" namespace="/module/map" extends="basePack" >  
+        	<action name="getAllVisit" class="mapAction" method="getAllVisit">
+				   <result name="success">mapShow.jsp</result>
+			</action>
+			<action name="getAllBranch" class="userAction" method="getAllBranch">
+					<result name="success">searchTop.jsp</result>
+			</action>
+			<action name="getAllAppClent" class="userAction" method="getAllAppClent">
+					<result name="success">searchTop.jsp</result>
+			</action>
+       </package>  
+       
+      
+	
+</struts>

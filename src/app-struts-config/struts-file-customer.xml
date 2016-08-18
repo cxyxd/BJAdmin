@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+         
+       <package name="customer" namespace="/module/customer" extends="json-default,basePack" >  
+        	<action name="insertCustomer" class="customerAction" method="insert">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+			
+			<action name="getAllCustomerAndroid" class="customerAction" method="getAllCustomerAndroid">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+			
+			<action name="getCusName" class="customerAction" method="getCusName">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+			
+			<action name="delete" class="customerAction" method="delete">
+				<result type="json">
+					<param name="root">resultObj</param>  
+				</result>
+			</action>
+			
+			
+       </package>  
+       
+        <package name="getcustomer" namespace="/module/customer" extends="basePack" >  
+        	<action name="getAllCustomer" class="customerAction" method="getAllCustomer">
+					<result name="success">showCustomerResult.jsp</result>
+			</action>
+			
+			<action name="getAllAppClent" class="userAction" method="getAllAppClent">
+					<result name="success">customerInfo.jsp</result>
+			</action>
+			
+			 <action name="getByIdWith1" class="customerAction" method="getById">
+					<result name="success">editCustomerType1.jsp</result>
+			</action>
+			<action name="getByIdWith2" class="customerAction" method="getById">
+					<result name="success">editCustomerType2.jsp</result>
+			</action>
+       </package>  
+       
+      
+	
+</struts>
