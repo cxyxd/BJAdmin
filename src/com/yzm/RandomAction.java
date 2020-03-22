@@ -31,6 +31,7 @@ public class RandomAction extends BaseAction {
 		RandomNumUtil rdnu = RandomNumUtil.Instance();
 		this.setInputStream(rdnu.getImage());// 取得带有随机字符串的图片
 		System.out.println(rdnu.getString()+" lll");
+		System.out.println(rdnu.getString()+" lll");
 		getSession().put("sessionCode", rdnu.getString());// 取得随机字符串放入HttpSession
 		request.getSession().setAttribute("sessionCode", rdnu.getString());
 		return SUCCESS;
