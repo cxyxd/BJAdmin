@@ -16,7 +16,7 @@ public class RandomAction extends BaseAction {
 	 * 
 	 */
 	private static final long serialVersionUID = -2703674182558208308L;
-	
+
 	private ByteArrayInputStream inputStream;
 	
 	public void setInputStream(ByteArrayInputStream inputStream) {
